@@ -70,11 +70,11 @@ export type PlasmicHomepage__OverridesType = {
   row3?: p.Flex<"div">;
   custodian?: p.Flex<"section">;
   row4?: p.Flex<"div">;
-  partner?: p.Flex<"section">;
-  row5?: p.Flex<"div">;
   cta?: p.Flex<"section">;
   row6?: p.Flex<"div">;
   h3?: p.Flex<"h3">;
+  partner?: p.Flex<"section">;
+  row5?: p.Flex<"div">;
   footer?: p.Flex<"section">;
   row7?: p.Flex<"div">;
 };
@@ -412,7 +412,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h1__bheFj
                 )}
               >
-                {"Services"}
+                {"Our Services"}
               </h1>
             </div>
 
@@ -565,7 +565,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"75%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("50%" as const)
+                        : ("75%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: "/plasmic/coinjoss_com/images/stakingpng.png",
@@ -605,7 +609,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
                     displayMinWidth={"0" as const}
-                    displayWidth={"75%" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("50%" as const)
+                        : ("75%" as const)
+                    }
                     loading={"lazy" as const}
                     src={{
                       src: "/plasmic/coinjoss_com/images/custodijosspng.png",
@@ -664,157 +672,6 @@ function PlasmicHomepage__RenderFunc(props: {
 
           <p.Stack
             as={"section"}
-            data-plasmic-name={"partner"}
-            data-plasmic-override={overrides.partner}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.partner)}
-          >
-            <div className={classNames(projectcss.all, sty.freeBox__n5OYk)}>
-              <h1
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h1,
-                  projectcss.__wab_text,
-                  sty.h1___1DGaE
-                )}
-              >
-                {"Payment Services Provided by"}
-              </h1>
-            </div>
-
-            <div
-              data-plasmic-name={"row5"}
-              data-plasmic-override={overrides.row5}
-              className={classNames(projectcss.all, sty.row5)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox___9I1Vk)}>
-                <div className={classNames(projectcss.all, sty.freeBox__nTkFp)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__feXo1)}
-                    displayHeight={"72px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/cybavopng.png",
-                      fullWidth: 374,
-                      fullHeight: 160,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__jSeNo)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__yT9Vg)}
-                    displayHeight={"72px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/xenditpng.png",
-                      fullWidth: 219,
-                      fullHeight: 74,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__gfQ)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__nkGqc)}
-                    displayHeight={"72px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/bcapng.png",
-                      fullWidth: 171,
-                      fullHeight: 54,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___8NbYf)}
-                >
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__kNq0I)}
-                    displayHeight={"72px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/mandiripng.png",
-                      fullWidth: 184,
-                      fullHeight: 57,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__jomck)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__huqww)}
-                    displayHeight={"72px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/gnosispng.png",
-                      fullWidth: 348,
-                      fullHeight: 145,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-
-                <div className={classNames(projectcss.all, sty.freeBox__aR4TU)}>
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img___4YcJ0)}
-                    displayHeight={"72px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/locktonpng.png",
-                      fullWidth: 3000,
-                      fullHeight: 2000,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </p.Stack>
-
-          <p.Stack
-            as={"section"}
             data-plasmic-name={"cta"}
             data-plasmic-override={overrides.cta}
             hasGap={true}
@@ -852,6 +709,181 @@ function PlasmicHomepage__RenderFunc(props: {
                   {"Register Now"}
                 </Button>
               </p.Stack>
+            </div>
+          </p.Stack>
+
+          <p.Stack
+            as={"section"}
+            data-plasmic-name={"partner"}
+            data-plasmic-override={overrides.partner}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.partner)}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__n5OYk)}>
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1___1DGaE
+                )}
+              >
+                {"Payment Services Provided by"}
+              </h1>
+            </div>
+
+            <div
+              data-plasmic-name={"row5"}
+              data-plasmic-override={overrides.row5}
+              className={classNames(projectcss.all, sty.row5)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox___9I1Vk)}>
+                <div className={classNames(projectcss.all, sty.freeBox__nTkFp)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__feXo1)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("32px" as const)
+                        : ("72px" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/cybavopng.png",
+                      fullWidth: 374,
+                      fullHeight: 160,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.freeBox__jSeNo)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__yT9Vg)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("32px" as const)
+                        : ("72px" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/xenditpng.png",
+                      fullWidth: 219,
+                      fullHeight: 74,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.freeBox__gfQ)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__nkGqc)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("24px" as const)
+                        : ("72px" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/bcapng.png",
+                      fullWidth: 171,
+                      fullHeight: 54,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___8NbYf)}
+                >
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__kNq0I)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("32px" as const)
+                        : ("72px" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/mandiripng.png",
+                      fullWidth: 184,
+                      fullHeight: 57,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.freeBox__jomck)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__huqww)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("32px" as const)
+                        : ("72px" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/gnosispng.png",
+                      fullWidth: 348,
+                      fullHeight: 145,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <div className={classNames(projectcss.all, sty.freeBox__aR4TU)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___4YcJ0)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("42px" as const)
+                        : ("72px" as const)
+                    }
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"auto" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/locktonpng.png",
+                      fullWidth: 3000,
+                      fullHeight: 2000,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </p.Stack>
 
@@ -1128,11 +1160,11 @@ const PlasmicDescendants = {
     "row3",
     "custodian",
     "row4",
-    "partner",
-    "row5",
     "cta",
     "row6",
     "h3",
+    "partner",
+    "row5",
     "footer",
     "row7"
   ],
@@ -1147,11 +1179,11 @@ const PlasmicDescendants = {
   row3: ["row3"],
   custodian: ["custodian", "row4"],
   row4: ["row4"],
-  partner: ["partner", "row5"],
-  row5: ["row5"],
   cta: ["cta", "row6", "h3"],
   row6: ["row6", "h3"],
   h3: ["h3"],
+  partner: ["partner", "row5"],
+  row5: ["row5"],
   footer: ["footer", "row7"],
   row7: ["row7"]
 } as const;
@@ -1171,11 +1203,11 @@ type NodeDefaultElementType = {
   row3: "div";
   custodian: "section";
   row4: "div";
-  partner: "section";
-  row5: "div";
   cta: "section";
   row6: "div";
   h3: "h3";
+  partner: "section";
+  row5: "div";
   footer: "section";
   row7: "div";
 };
@@ -1252,11 +1284,11 @@ export const PlasmicHomepage = Object.assign(
     row3: makeNodeComponent("row3"),
     custodian: makeNodeComponent("custodian"),
     row4: makeNodeComponent("row4"),
-    partner: makeNodeComponent("partner"),
-    row5: makeNodeComponent("row5"),
     cta: makeNodeComponent("cta"),
     row6: makeNodeComponent("row6"),
     h3: makeNodeComponent("h3"),
+    partner: makeNodeComponent("partner"),
+    row5: makeNodeComponent("row5"),
     footer: makeNodeComponent("footer"),
     row7: makeNodeComponent("row7"),
 
