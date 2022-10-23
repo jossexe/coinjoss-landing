@@ -1,0 +1,214 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
+      "projectApiToken": "uZp069FLSLNVA2dpWnqC3BUaj3flvtNBNXt6e1b67rm4Uh6lGHgYJ65FCBXlOFTB5KDW7RmmOxIAzgHYCg",
+      "projectName": "plasmic-nav",
+      "version": "0.6.0",
+      "cssFilePath": "plasmic/plasmic_nav/plasmic_plasmic_nav.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "jGx9tiKJoex",
+          "name": "NavigationBar",
+          "componentImportPath": "@plasmicpkgs/plasmic-nav"
+        }
+      ]
+    },
+    {
+      "projectId": "sMfv1hg7t9bpqK5N2h2Xpc",
+      "projectApiToken": "PAVlUn2dNd0UgwYBPcW0wKVNeZrzHr7oryFI59sAdVv4GTByCsioRBO33wyXFhRSN14GlUxx14jZeOaysg",
+      "projectName": "coinjoss.com",
+      "version": "latest",
+      "cssFilePath": "plasmic/coinjoss_com/plasmic_coinjoss_com.module.css",
+      "components": [
+        {
+          "id": "X2eTwNfEQNyM",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "sMfv1hg7t9bpqK5N2h2Xpc",
+          "renderModuleFilePath": "plasmic/coinjoss_com/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/coinjoss_com/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "B2AzBChSZBa",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "sMfv1hg7t9bpqK5N2h2Xpc",
+          "renderModuleFilePath": "plasmic/coinjoss_com/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/coinjoss_com/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        }
+      ],
+      "icons": [
+        {
+          "id": "C1r0wy0DtJv",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "xD4MiLWeXK-",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "vI1V6MDOzo",
+          "name": "ArrowRightsvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__ArrowRightsvg.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "8N7FXZOYD",
+          "name": "Logo1-coinjoss.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/logo1Coinjosspng.png"
+        },
+        {
+          "id": "Wi4O4sfb8",
+          "name": "Untitled design (1).png",
+          "filePath": "../public/plasmic/coinjoss_com/images/untitledDesign1Png.png"
+        },
+        {
+          "id": "NCTizchsY",
+          "name": "hero-coinjoss.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/heroCoinjosspng.png"
+        },
+        {
+          "id": "629EUlFfq",
+          "name": "Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/logoOfMinistryOfCommunicationAndInformationTechnologyOfTheRepublicOfIndonesiasvgpng.png"
+        },
+        {
+          "id": "K86zyfRE6",
+          "name": "exchange.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/exchangepng.png"
+        },
+        {
+          "id": "xa5HB7k_g",
+          "name": "coinjoss-wallet.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/coinjossWalletpng.png"
+        },
+        {
+          "id": "2wzYRE3ML",
+          "name": "earnjoss.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/earnjosspng.png"
+        },
+        {
+          "id": "KPcgt86E1",
+          "name": "walet.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/waletpng.png"
+        },
+        {
+          "id": "lcoz-TdP6",
+          "name": "exhcangequick.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/exhcangequickpng.png"
+        },
+        {
+          "id": "nrdVy2YRN",
+          "name": "staking.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/stakingpng.png"
+        },
+        {
+          "id": "ks0AqpiTF",
+          "name": "custodijoss.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/custodijosspng.png"
+        },
+        {
+          "id": "v9bSzZLuP",
+          "name": "cybavo.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/cybavopng.png"
+        },
+        {
+          "id": "rXsPYXsoi",
+          "name": "xendit.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/xenditpng.png"
+        },
+        {
+          "id": "IrHyGmdjX",
+          "name": "bca.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/bcapng.png"
+        },
+        {
+          "id": "QJFIqbkA-",
+          "name": "mandiri.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/mandiripng.png"
+        },
+        {
+          "id": "ZGVX0drPm",
+          "name": "gnosis.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/gnosispng.png"
+        },
+        {
+          "id": "xSupz5vjy",
+          "name": "lockton.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/locktonpng.png"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CmrFOYieR4",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "6Y7MjQ0H2-",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "oR09Sl7pmsYZR",
+        "name": "Screen",
+        "projectId": "sMfv1hg7t9bpqK5N2h2Xpc",
+        "contextFilePath": "plasmic/coinjoss_com/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.186",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.186/dist/plasmic.schema.json"
+}
