@@ -178,6 +178,16 @@
           "id": "xSupz5vjy",
           "name": "lockton.png",
           "filePath": "../public/plasmic/coinjoss_com/images/locktonpng.png"
+        },
+        {
+          "id": "KEhAg9OL3",
+          "name": "ISO_9001-2015.svg.png",
+          "filePath": "../public/plasmic/coinjoss_com/images/iso90012015Svgpng.png"
+        },
+        {
+          "id": "Jy4nwDTA2",
+          "name": "Artikel-ISO27001 (1).png",
+          "filePath": "../public/plasmic/coinjoss_com/images/artikelIso270011Png.png"
         }
       ],
       "indirect": false,

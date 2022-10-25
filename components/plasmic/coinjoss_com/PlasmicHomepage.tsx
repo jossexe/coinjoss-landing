@@ -353,23 +353,70 @@ function PlasmicHomepage__RenderFunc(props: {
                       {"Registered"}
                     </h6>
 
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__usCo)}
-                      displayHeight={"64px" as const}
-                      displayMaxHeight={"none" as const}
-                      displayMaxWidth={"100%" as const}
-                      displayMinHeight={"0" as const}
-                      displayMinWidth={"0" as const}
-                      displayWidth={"auto" as const}
-                      loading={"lazy" as const}
-                      src={{
-                        src: "/plasmic/coinjoss_com/images/logoOfMinistryOfCommunicationAndInformationTechnologyOfTheRepublicOfIndonesiasvgpng.png",
-                        fullWidth: 2060,
-                        fullHeight: 2052,
-                        aspectRatio: undefined
-                      }}
-                    />
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__c51RZ
+                        )}
+                      >
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__usCo)}
+                          displayHeight={"64px" as const}
+                          displayMaxHeight={"none" as const}
+                          displayMaxWidth={"100%" as const}
+                          displayMinHeight={"0" as const}
+                          displayMinWidth={"0" as const}
+                          displayWidth={"auto" as const}
+                          loading={"lazy" as const}
+                          src={{
+                            src: "/plasmic/coinjoss_com/images/logoOfMinistryOfCommunicationAndInformationTechnologyOfTheRepublicOfIndonesiasvgpng.png",
+                            fullWidth: 2060,
+                            fullHeight: 2052,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__mQ9BS)}
+                          displayHeight={"64px" as const}
+                          displayMaxHeight={"none" as const}
+                          displayMaxWidth={"100%" as const}
+                          displayMinHeight={"0" as const}
+                          displayMinWidth={"0" as const}
+                          displayWidth={"auto" as const}
+                          loading={"lazy" as const}
+                          src={{
+                            src: "/plasmic/coinjoss_com/images/iso90012015Svgpng.png",
+                            fullWidth: 2240,
+                            fullHeight: 2048,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__aJsln)}
+                          displayHeight={"64px" as const}
+                          displayMaxHeight={"none" as const}
+                          displayMaxWidth={"100%" as const}
+                          displayMinHeight={"0" as const}
+                          displayMinWidth={"0" as const}
+                          displayWidth={"auto" as const}
+                          loading={"lazy" as const}
+                          src={{
+                            src: "/plasmic/coinjoss_com/images/artikelIso270011Png.png",
+                            fullWidth: 1063,
+                            fullHeight: 1063,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </p.Stack>
+                    ) : null}
                   </p.Stack>
                 </p.Stack>
 
@@ -637,7 +684,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.h1__nyPx
                     )}
                   >
-                    {"Custodian"}
+                    {"Decentralized Exchange"}
                   </h1>
 
                   <p
@@ -649,7 +696,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Save assets in Staking, enjoy the Monthly interest. Top up and withdraw balance at any time."
+                      "er-to-peer marketplace where transactions occur directly between crypto traders"
                     }
                   </p>
 
