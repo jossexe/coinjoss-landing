@@ -47,6 +47,13 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: X2eTwNfEQNyM/
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: C1r0wy0DtJv/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: xD4MiLWeXK-/icon
 import ArrowRightsvgIcon from "./icons/PlasmicIcon__ArrowRightsvg"; // plasmic-import: vI1V6MDOzo/icon
+import FacebookSvgrepoComsvgIcon from "./icons/PlasmicIcon__FacebookSvgrepoComsvg"; // plasmic-import: a9385cNnDv/icon
+import InstagramSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__InstagramSvgrepoCom1Svg"; // plasmic-import: RpEl5pb15K/icon
+import TwitterSvgrepoComsvgIcon from "./icons/PlasmicIcon__TwitterSvgrepoComsvg"; // plasmic-import: W3lydZRry9/icon
+import MediumCircleSvgrepoComsvgIcon from "./icons/PlasmicIcon__MediumCircleSvgrepoComsvg"; // plasmic-import: LteOjVPvvt/icon
+import LinkedinSvgrepoComsvgIcon from "./icons/PlasmicIcon__LinkedinSvgrepoComsvg"; // plasmic-import: -JrcytDXSf/icon
+import DiscordSvgrepoComsvgIcon from "./icons/PlasmicIcon__DiscordSvgrepoComsvg"; // plasmic-import: shO8z3gKYM/icon
+import TelegramSvgrepoCom2SvgIcon from "./icons/PlasmicIcon__TelegramSvgrepoCom2Svg"; // plasmic-import: GUGaE4NCXF/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
@@ -77,6 +84,14 @@ export type PlasmicHomepage__OverridesType = {
   row5?: p.Flex<"div">;
   footer?: p.Flex<"section">;
   row7?: p.Flex<"div">;
+  socmedWrapper?: p.Flex<"div">;
+  socmed?: p.Flex<"a"> & Partial<LinkProps>;
+  socmed2?: p.Flex<"a"> & Partial<LinkProps>;
+  socmed3?: p.Flex<"a"> & Partial<LinkProps>;
+  socmed4?: p.Flex<"a"> & Partial<LinkProps>;
+  socmed5?: p.Flex<"a"> & Partial<LinkProps>;
+  socmed6?: p.Flex<"a"> & Partial<LinkProps>;
+  socmed7?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -193,7 +208,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__cjGAr
                     )}
                     component={Link}
-                    href={"/" as const}
+                    href={"#services" as const}
                     platform={"nextjs"}
                   >
                     {"Services"}
@@ -207,7 +222,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__fQrf5
                     )}
                     component={Link}
-                    href={"/" as const}
+                    href={"https://coinjoss.com/company" as const}
                     platform={"nextjs"}
                   >
                     {"About Us"}
@@ -221,7 +236,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link___3V16S
                     )}
                     component={Link}
-                    href={"/" as const}
+                    href={"https://coinjoss.com/faq" as const}
                     platform={"nextjs"}
                   >
                     {"FAQ"}
@@ -235,7 +250,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__dCAvq
                     )}
                     component={Link}
-                    href={"/" as const}
+                    href={"https://coinjoss.com/contact-us" as const}
                     platform={"nextjs"}
                   >
                     {"Contact"}
@@ -350,7 +365,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h6
                       )}
                     >
-                      {"Registered"}
+                      {"Supervised and registered by :"}
                     </h6>
 
                     {true ? (
@@ -380,41 +395,69 @@ function PlasmicHomepage__RenderFunc(props: {
                           }}
                         />
 
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__mQ9BS)}
-                          displayHeight={"64px" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: "/plasmic/coinjoss_com/images/iso90012015Svgpng.png",
-                            fullWidth: 2240,
-                            fullHeight: 2048,
-                            aspectRatio: undefined
-                          }}
-                        />
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link__eswhG
+                          )}
+                          component={Link}
+                          href={
+                            "http://asm.pqalindonesia.com/?i=page.result&keyword=qms%2F2209167&company=PT.+Coinjoss+Data+Utama" as const
+                          }
+                          platform={"nextjs"}
+                          target={"_blank" as const}
+                        >
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__mQ9BS)}
+                            displayHeight={"64px" as const}
+                            displayMaxHeight={"none" as const}
+                            displayMaxWidth={"100%" as const}
+                            displayMinHeight={"0" as const}
+                            displayMinWidth={"0" as const}
+                            displayWidth={"auto" as const}
+                            loading={"lazy" as const}
+                            src={{
+                              src: "/plasmic/coinjoss_com/images/iso90012015Svgpng.png",
+                              fullWidth: 2240,
+                              fullHeight: 2048,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </p.PlasmicLink>
 
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__aJsln)}
-                          displayHeight={"64px" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: "/plasmic/coinjoss_com/images/artikelIso270011Png.png",
-                            fullWidth: 1063,
-                            fullHeight: 1063,
-                            aspectRatio: undefined
-                          }}
-                        />
+                        <p.PlasmicLink
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            sty.link___9KlPb
+                          )}
+                          component={Link}
+                          href={
+                            "http://asm.pqalindonesia.com/?i=page.result&keyword=isms%2F2209167&company=PT.+Coinjoss+Data+Utama" as const
+                          }
+                          platform={"nextjs"}
+                          target={"_blank" as const}
+                        >
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__aJsln)}
+                            displayHeight={"64px" as const}
+                            displayMaxHeight={"none" as const}
+                            displayMaxWidth={"100%" as const}
+                            displayMinHeight={"0" as const}
+                            displayMinWidth={"0" as const}
+                            displayWidth={"auto" as const}
+                            loading={"lazy" as const}
+                            src={{
+                              src: "/plasmic/coinjoss_com/images/artikelIso270011Png.png",
+                              fullWidth: 1063,
+                              fullHeight: 1063,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </p.PlasmicLink>
                       </p.Stack>
                     ) : null}
                   </p.Stack>
@@ -449,6 +492,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.exchange}
             hasGap={true}
             className={classNames(projectcss.all, sty.exchange)}
+            id={"services" as const}
           >
             <div className={classNames(projectcss.all, sty.freeBox__jDaLa)}>
               <h1
@@ -585,7 +629,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Save assets in Staking, enjoy the Monthly interest. Top up and withdraw balance at any time."
+                      "Generate cash flow with crypto up to 30% possible, without the complexity and protected by insurance up to $5,000,000*"
                     }
                   </p>
 
@@ -696,7 +740,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "er-to-peer marketplace where transactions occur directly between crypto traders"
+                      "Swap, Earn and Repeat, maximizing to increase your value."
                     }
                   </p>
 
@@ -749,12 +793,23 @@ function PlasmicHomepage__RenderFunc(props: {
                   }
                 </h3>
 
-                <Button
-                  className={classNames("__wab_instance", sty.button__opsae)}
-                  color={"white" as const}
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link___4WrSk
+                  )}
+                  component={Link}
+                  href={"https://platform.coinjoss.com/register" as const}
+                  platform={"nextjs"}
                 >
-                  {"Register Now"}
-                </Button>
+                  <Button
+                    className={classNames("__wab_instance", sty.button__opsae)}
+                    color={"white" as const}
+                  >
+                    {"Register Now"}
+                  </Button>
+                </p.PlasmicLink>
               </p.Stack>
             </div>
           </p.Stack>
@@ -914,7 +969,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayHeight={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("42px" as const)
-                        : ("72px" as const)
+                        : ("92px" as const)
                     }
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"100%" as const}
@@ -999,6 +1054,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__fhxpB
                     )}
                     component={Link}
+                    href={"https://blog.coinjoss.com/" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1019,6 +1075,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__kLstT
                     )}
                     component={Link}
+                    href={"https://platform.coinjoss.com/login" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1039,6 +1096,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link___6It1I
                     )}
                     component={Link}
+                    href={"https://platform.coinjoss.com/login" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1059,6 +1117,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link___3Typa
                     )}
                     component={Link}
+                    href={"https://platform.coinjoss.com/login" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1068,7 +1127,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text__kN1N
                       )}
                     >
-                      {"Custodian"}
+                      {"Decentralized Exchange"}
                     </div>
                   </p.PlasmicLink>
 
@@ -1105,6 +1164,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__b3Uko
                     )}
                     component={Link}
+                    href={"https://coinjoss.com/term-and-conditions" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1125,6 +1185,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__e9ATu
                     )}
                     component={Link}
+                    href={"https://coinjoss.com/privacy-policy" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1145,6 +1206,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__d6IBw
                     )}
                     component={Link}
+                    href={"https://coinjoss.com/faq" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -1159,7 +1221,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   </p.PlasmicLink>
                 </p.Stack>
 
-                <div className={classNames(projectcss.all, sty.column__bRgNm)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column__bRgNm)}
+                >
                   <div
                     className={classNames(projectcss.all, sty.freeBox__sq48G)}
                   >
@@ -1173,7 +1239,146 @@ function PlasmicHomepage__RenderFunc(props: {
                       {"Our Social Media"}
                     </div>
                   </div>
-                </div>
+
+                  <p.Stack
+                    as={"div"}
+                    data-plasmic-name={"socmedWrapper"}
+                    data-plasmic-override={overrides.socmedWrapper}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.socmedWrapper)}
+                  >
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed"}
+                      data-plasmic-override={overrides.socmed}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed
+                      )}
+                      component={Link}
+                      href={
+                        "https://www.facebook.com/coinjossofficial" as const
+                      }
+                      platform={"nextjs"}
+                    >
+                      <FacebookSvgrepoComsvgIcon
+                        className={classNames(projectcss.all, sty.svg__nfgN)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed2"}
+                      data-plasmic-override={overrides.socmed2}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed2
+                      )}
+                      component={Link}
+                      href={
+                        "https://www.instagram.com/coinjossofficial/" as const
+                      }
+                      platform={"nextjs"}
+                    >
+                      <InstagramSvgrepoCom1SvgIcon
+                        className={classNames(projectcss.all, sty.svg__kn5Tz)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed3"}
+                      data-plasmic-override={overrides.socmed3}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed3
+                      )}
+                      component={Link}
+                      href={"https://twitter.com/coinjoss" as const}
+                      platform={"nextjs"}
+                    >
+                      <TwitterSvgrepoComsvgIcon
+                        className={classNames(projectcss.all, sty.svg__o97I)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed4"}
+                      data-plasmic-override={overrides.socmed4}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed4
+                      )}
+                      component={Link}
+                      href={"https://medium.com/coinjoss" as const}
+                      platform={"nextjs"}
+                    >
+                      <MediumCircleSvgrepoComsvgIcon
+                        className={classNames(projectcss.all, sty.svg__hk4Ul)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed5"}
+                      data-plasmic-override={overrides.socmed5}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed5
+                      )}
+                      component={Link}
+                      href={
+                        "https://www.linkedin.com/company/coinjoss/" as const
+                      }
+                      platform={"nextjs"}
+                    >
+                      <LinkedinSvgrepoComsvgIcon
+                        className={classNames(projectcss.all, sty.svg__sIr7E)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed6"}
+                      data-plasmic-override={overrides.socmed6}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed6
+                      )}
+                      component={Link}
+                      platform={"nextjs"}
+                    >
+                      <DiscordSvgrepoComsvgIcon
+                        className={classNames(projectcss.all, sty.svg__pq087)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+
+                    <p.PlasmicLink
+                      data-plasmic-name={"socmed7"}
+                      data-plasmic-override={overrides.socmed7}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.socmed7
+                      )}
+                      component={Link}
+                      href={"https://t.me/CoinjossChannel" as const}
+                      platform={"nextjs"}
+                    >
+                      <TelegramSvgrepoCom2SvgIcon
+                        className={classNames(projectcss.all, sty.svg__o0UMm)}
+                        role={"img"}
+                      />
+                    </p.PlasmicLink>
+                  </p.Stack>
+                </p.Stack>
               </p.Stack>
             </div>
 
@@ -1213,7 +1418,15 @@ const PlasmicDescendants = {
     "partner",
     "row5",
     "footer",
-    "row7"
+    "row7",
+    "socmedWrapper",
+    "socmed",
+    "socmed2",
+    "socmed3",
+    "socmed4",
+    "socmed5",
+    "socmed6",
+    "socmed7"
   ],
   navbar: ["navbar", "navigationBar"],
   navigationBar: ["navigationBar"],
@@ -1231,8 +1444,46 @@ const PlasmicDescendants = {
   h3: ["h3"],
   partner: ["partner", "row5"],
   row5: ["row5"],
-  footer: ["footer", "row7"],
-  row7: ["row7"]
+  footer: [
+    "footer",
+    "row7",
+    "socmedWrapper",
+    "socmed",
+    "socmed2",
+    "socmed3",
+    "socmed4",
+    "socmed5",
+    "socmed6",
+    "socmed7"
+  ],
+  row7: [
+    "row7",
+    "socmedWrapper",
+    "socmed",
+    "socmed2",
+    "socmed3",
+    "socmed4",
+    "socmed5",
+    "socmed6",
+    "socmed7"
+  ],
+  socmedWrapper: [
+    "socmedWrapper",
+    "socmed",
+    "socmed2",
+    "socmed3",
+    "socmed4",
+    "socmed5",
+    "socmed6",
+    "socmed7"
+  ],
+  socmed: ["socmed"],
+  socmed2: ["socmed2"],
+  socmed3: ["socmed3"],
+  socmed4: ["socmed4"],
+  socmed5: ["socmed5"],
+  socmed6: ["socmed6"],
+  socmed7: ["socmed7"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1257,6 +1508,14 @@ type NodeDefaultElementType = {
   row5: "div";
   footer: "section";
   row7: "div";
+  socmedWrapper: "div";
+  socmed: "a";
+  socmed2: "a";
+  socmed3: "a";
+  socmed4: "a";
+  socmed5: "a";
+  socmed6: "a";
+  socmed7: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1338,6 +1597,14 @@ export const PlasmicHomepage = Object.assign(
     row5: makeNodeComponent("row5"),
     footer: makeNodeComponent("footer"),
     row7: makeNodeComponent("row7"),
+    socmedWrapper: makeNodeComponent("socmedWrapper"),
+    socmed: makeNodeComponent("socmed"),
+    socmed2: makeNodeComponent("socmed2"),
+    socmed3: makeNodeComponent("socmed3"),
+    socmed4: makeNodeComponent("socmed4"),
+    socmed5: makeNodeComponent("socmed5"),
+    socmed6: makeNodeComponent("socmed6"),
+    socmed7: makeNodeComponent("socmed7"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

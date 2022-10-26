@@ -91,6 +91,41 @@
           "id": "vI1V6MDOzo",
           "name": "ArrowRightsvgIcon",
           "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__ArrowRightsvg.tsx"
+        },
+        {
+          "id": "a9385cNnDv",
+          "name": "FacebookSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__FacebookSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "RpEl5pb15K",
+          "name": "InstagramSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__InstagramSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "W3lydZRry9",
+          "name": "TwitterSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__TwitterSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "LteOjVPvvt",
+          "name": "MediumCircleSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__MediumCircleSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "-JrcytDXSf",
+          "name": "LinkedinSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__LinkedinSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "shO8z3gKYM",
+          "name": "DiscordSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__DiscordSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "GUGaE4NCXF",
+          "name": "TelegramSvgrepoCom2SvgIcon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__TelegramSvgrepoCom2Svg.tsx"
         }
       ],
       "images": [
