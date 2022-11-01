@@ -256,19 +256,47 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Contact"}
                   </p.PlasmicLink>
 
-                  <Button
-                    className={classNames("__wab_instance", sty.button__suLCd)}
-                    color={"softBlue" as const}
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__trHdF
+                    )}
+                    component={Link}
+                    href={"https://platform.coinjoss.com/login" as const}
+                    platform={"nextjs"}
                   >
-                    {"Login"}
-                  </Button>
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__suLCd
+                      )}
+                      color={"softBlue" as const}
+                    >
+                      {"Login"}
+                    </Button>
+                  </p.PlasmicLink>
 
-                  <Button
-                    className={classNames("__wab_instance", sty.button__alpy1)}
-                    color={"blue" as const}
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__ih5Cr
+                    )}
+                    component={Link}
+                    href={"https://platform.coinjoss.com/register" as const}
+                    platform={"nextjs"}
                   >
-                    {"Register"}
-                  </Button>
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__alpy1
+                      )}
+                      color={"blue" as const}
+                    >
+                      {"Register"}
+                    </Button>
+                  </p.PlasmicLink>
                 </React.Fragment>
               }
               openButton={

@@ -103,31 +103,37 @@
   height: auto;
   max-width: 800px;
 }
+.link__trHdF {
+  display: flex;
+}
 .button__suLCd:global(.__wab_instance) {
   max-width: 100%;
 }
-.svg__erQEm {
+.svg__z56Aj {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__faXlm {
+.svg__bTgfa {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
+}
+.link__ih5Cr {
+  display: flex;
 }
 .button__alpy1:global(.__wab_instance) {
   max-width: 100%;
 }
-.svg__h0RBy {
+.svg__ci2V {
   position: relative;
   object-fit: cover;
   width: 1em;
   height: 1em;
 }
-.svg__gfVcK {
+.svg__hU8 {
   position: relative;
   object-fit: cover;
   width: 1em;
