@@ -223,6 +223,16 @@
           "id": "Jy4nwDTA2",
           "name": "Artikel-ISO27001 (1).png",
           "filePath": "../public/plasmic/coinjoss_com/images/artikelIso270011Png.png"
+        },
+        {
+          "id": "TZq0m1vfA",
+          "name": "iso9001.jpg",
+          "filePath": "../public/plasmic/coinjoss_com/images/iso9001Jpg.jpeg"
+        },
+        {
+          "id": "zIEy-5AJQ",
+          "name": "iso20071.jpg",
+          "filePath": "../public/plasmic/coinjoss_com/images/iso20071Jpg.jpeg"
         }
       ],
       "indirect": false,
@@ -255,6 +265,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.186",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.186/dist/plasmic.schema.json"
+  "cliVersion": "0.1.187",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.187/dist/plasmic.schema.json"
 }

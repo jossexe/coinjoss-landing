@@ -419,9 +419,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             displayWidth={"auto" as const}
                             loading={"lazy" as const}
                             src={{
-                              src: "/plasmic/coinjoss_com/images/iso90012015Svgpng.png",
-                              fullWidth: 2240,
-                              fullHeight: 2048,
+                              src: "/plasmic/coinjoss_com/images/iso9001Jpg.jpeg",
+                              fullWidth: 1280,
+                              fullHeight: 811,
                               aspectRatio: undefined
                             }}
                           />
@@ -451,9 +451,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             displayWidth={"auto" as const}
                             loading={"lazy" as const}
                             src={{
-                              src: "/plasmic/coinjoss_com/images/artikelIso270011Png.png",
-                              fullWidth: 1063,
-                              fullHeight: 1063,
+                              src: "/plasmic/coinjoss_com/images/iso20071Jpg.jpeg",
+                              fullWidth: 1280,
+                              fullHeight: 811,
                               aspectRatio: undefined
                             }}
                           />
