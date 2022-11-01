@@ -295,6 +295,9 @@
   color: #9fadbd;
   min-width: 0;
 }
+.link__i85Ir {
+  display: flex;
+}
 .button__uBcD5:global(.__wab_instance) {
   max-width: 100%;
 }
@@ -310,7 +313,7 @@
   width: 1em;
   height: 1em;
 }
-.svg__ecWz {
+.svg__dxYRo {
   position: relative;
   object-fit: cover;
   width: 1em;

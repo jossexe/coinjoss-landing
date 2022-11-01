@@ -364,19 +364,33 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   </p>
 
-                  <Button
-                    className={classNames("__wab_instance", sty.button__uBcD5)}
-                    color={"blue" as const}
-                    showEndIcon={true}
-                    startIcon={
-                      <ArrowRightsvgIcon
-                        className={classNames(projectcss.all, sty.svg__cArez)}
-                        role={"img"}
-                      />
-                    }
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__i85Ir
+                    )}
+                    component={Link}
+                    href={"#services" as const}
+                    platform={"nextjs"}
                   >
-                    {"Learn More"}
-                  </Button>
+                    <Button
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button__uBcD5
+                      )}
+                      color={"blue" as const}
+                      showEndIcon={true}
+                      startIcon={
+                        <ArrowRightsvgIcon
+                          className={classNames(projectcss.all, sty.svg__cArez)}
+                          role={"img"}
+                        />
+                      }
+                    >
+                      {"Learn More"}
+                    </Button>
+                  </p.PlasmicLink>
 
                   <p.Stack
                     as={"div"}
