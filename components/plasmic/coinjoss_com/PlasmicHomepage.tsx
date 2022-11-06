@@ -36,6 +36,9 @@ import {
 } from "@plasmicapp/react-web";
 import { NavigationBar } from "@plasmicpkgs/plasmic-nav"; // plasmic-import: jGx9tiKJoex/codeComponent
 import Button from "../../Button"; // plasmic-import: B2AzBChSZBa/component
+import { Collapse } from "@plasmicpkgs/antd/skinny/registerCollapse"; // plasmic-import: F10gpQ1ZhXY/codeComponent
+import CollapsePanel from "antd/lib/collapse/CollapsePanel"; // plasmic-import: yegZ392NLoV/codeComponent
+import Footer from "../../Footer"; // plasmic-import: kSpHVPuP15V/component
 
 import { useScreenVariants as useScreenVariantsoR09Sl7PmsYzr } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: oR09Sl7pmsYZR/globalVariant
 
@@ -47,13 +50,9 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: X2eTwNfEQNyM/
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: C1r0wy0DtJv/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: xD4MiLWeXK-/icon
 import ArrowRightsvgIcon from "./icons/PlasmicIcon__ArrowRightsvg"; // plasmic-import: vI1V6MDOzo/icon
-import FacebookSvgrepoComsvgIcon from "./icons/PlasmicIcon__FacebookSvgrepoComsvg"; // plasmic-import: a9385cNnDv/icon
-import InstagramSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__InstagramSvgrepoCom1Svg"; // plasmic-import: RpEl5pb15K/icon
-import TwitterSvgrepoComsvgIcon from "./icons/PlasmicIcon__TwitterSvgrepoComsvg"; // plasmic-import: W3lydZRry9/icon
-import MediumCircleSvgrepoComsvgIcon from "./icons/PlasmicIcon__MediumCircleSvgrepoComsvg"; // plasmic-import: LteOjVPvvt/icon
-import LinkedinSvgrepoComsvgIcon from "./icons/PlasmicIcon__LinkedinSvgrepoComsvg"; // plasmic-import: -JrcytDXSf/icon
-import DiscordSvgrepoComsvgIcon from "./icons/PlasmicIcon__DiscordSvgrepoComsvg"; // plasmic-import: shO8z3gKYM/icon
-import TelegramSvgrepoCom2SvgIcon from "./icons/PlasmicIcon__TelegramSvgrepoCom2Svg"; // plasmic-import: GUGaE4NCXF/icon
+import LikesvgIcon from "./icons/PlasmicIcon__Likesvg"; // plasmic-import: 8BF27-mrmX/icon
+import ShieldTicksvgIcon from "./icons/PlasmicIcon__ShieldTicksvg"; // plasmic-import: sbvd34TJQy/icon
+import FlashsvgIcon from "./icons/PlasmicIcon__Flashsvg"; // plasmic-import: QKB6RJd74E/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
@@ -71,27 +70,27 @@ export type PlasmicHomepage__OverridesType = {
   hero?: p.Flex<"section">;
   row?: p.Flex<"div">;
   h6?: p.Flex<"h6">;
-  exchange?: p.Flex<"section">;
+  about?: p.Flex<"section">;
+  row7?: p.Flex<"div">;
+  items?: p.Flex<"div">;
+  iconholder?: p.Flex<"div">;
+  items2?: p.Flex<"div">;
+  iconholder2?: p.Flex<"div">;
+  items3?: p.Flex<"div">;
+  iconholder3?: p.Flex<"div">;
+  services?: p.Flex<"section">;
   row2?: p.Flex<"div">;
-  staking?: p.Flex<"section">;
+  faq?: p.Flex<"section">;
   row3?: p.Flex<"div">;
-  custodian?: p.Flex<"section">;
-  row4?: p.Flex<"div">;
+  faqContent?: p.Flex<"div">;
+  faqContent2?: p.Flex<"div">;
+  faqContent3?: p.Flex<"div">;
+  faqContent4?: p.Flex<"div">;
   cta?: p.Flex<"section">;
   row6?: p.Flex<"div">;
-  h3?: p.Flex<"h3">;
   partner?: p.Flex<"section">;
   row5?: p.Flex<"div">;
-  footer?: p.Flex<"section">;
-  row7?: p.Flex<"div">;
-  socmedWrapper?: p.Flex<"div">;
-  socmed?: p.Flex<"a"> & Partial<LinkProps>;
-  socmed2?: p.Flex<"a"> & Partial<LinkProps>;
-  socmed3?: p.Flex<"a"> & Partial<LinkProps>;
-  socmed4?: p.Flex<"a"> & Partial<LinkProps>;
-  socmed5?: p.Flex<"a"> & Partial<LinkProps>;
-  socmed6?: p.Flex<"a"> & Partial<LinkProps>;
-  socmed7?: p.Flex<"a"> & Partial<LinkProps>;
+  footer?: p.Flex<typeof Footer>;
 };
 
 export interface DefaultHomepageProps {}
@@ -112,6 +111,8 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
+
+  const currentUser = p.useCurrentUser?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsoR09Sl7PmsYzr()
@@ -205,6 +206,20 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.a,
                       projectcss.__wab_text,
+                      sty.link__fQrf5
+                    )}
+                    component={Link}
+                    href={"#about" as const}
+                    platform={"nextjs"}
+                  >
+                    {"About"}
+                  </p.PlasmicLink>
+
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
                       sty.link__cjGAr
                     )}
                     component={Link}
@@ -219,24 +234,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.a,
                       projectcss.__wab_text,
-                      sty.link__fQrf5
-                    )}
-                    component={Link}
-                    href={"https://coinjoss.com/company" as const}
-                    platform={"nextjs"}
-                  >
-                    {"About Us"}
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
                       sty.link___3V16S
                     )}
                     component={Link}
-                    href={"https://coinjoss.com/faq" as const}
+                    href={"#faq" as const}
                     platform={"nextjs"}
                   >
                     {"FAQ"}
@@ -250,7 +251,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__dCAvq
                     )}
                     component={Link}
-                    href={"https://coinjoss.com/contact-us" as const}
+                    href={"https://josscare.coinjoss.com/" as const}
                     platform={"nextjs"}
                   >
                     {"Contact"}
@@ -530,10 +531,221 @@ function PlasmicHomepage__RenderFunc(props: {
 
           <p.Stack
             as={"section"}
-            data-plasmic-name={"exchange"}
-            data-plasmic-override={overrides.exchange}
+            data-plasmic-name={"about"}
+            data-plasmic-override={overrides.about}
             hasGap={true}
-            className={classNames(projectcss.all, sty.exchange)}
+            className={classNames(projectcss.all, sty.about)}
+            id={"about" as const}
+          >
+            <div
+              data-plasmic-name={"row7"}
+              data-plasmic-override={overrides.row7}
+              className={classNames(projectcss.all, sty.row7)}
+            >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.columns__gG2UF)}
+              >
+                <div className={classNames(projectcss.all, sty.column___44X2D)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___0I5)}
+                    displayHeight={"auto" as const}
+                    displayMaxHeight={"none" as const}
+                    displayMaxWidth={"100%" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ("50%" as const)
+                        : ("75%" as const)
+                    }
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/coinjoss_com/images/btcmachinepng.png",
+                      fullWidth: 1080,
+                      fullHeight: 1080,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column___6PgYk)}
+                >
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1__eLqx8
+                    )}
+                  >
+                    {"Why Coinjoss?"}
+                  </h1>
+
+                  <p
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.p,
+                      projectcss.__wab_text,
+                      sty.p__enA0A
+                    )}
+                  >
+                    {
+                      "Coinjoss is a digital asset trading platform that allows its users to trade, pay for goods or services and participate in projects within the Coinjoss ecosystem. The platform is a hybrid exchange, which provides users with security via custody of their own assets while they are not actively being traded, but also the speed and performance of a centralized trading engine."
+                    }
+                  </p>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__a9WEp)}
+                  >
+                    <div
+                      data-plasmic-name={"items"}
+                      data-plasmic-override={overrides.items}
+                      className={classNames(projectcss.all, sty.items)}
+                    >
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__od5Ww
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"iconholder"}
+                            data-plasmic-override={overrides.iconholder}
+                            className={classNames(
+                              projectcss.all,
+                              sty.iconholder
+                            )}
+                          >
+                            <LikesvgIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__qBb18
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__skKpm
+                            )}
+                          >
+                            {"Simple Experience"}
+                          </div>
+                        </p.Stack>
+                      ) : null}
+                    </div>
+
+                    <div
+                      data-plasmic-name={"items2"}
+                      data-plasmic-override={overrides.items2}
+                      className={classNames(projectcss.all, sty.items2)}
+                    >
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__om9GY
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"iconholder2"}
+                            data-plasmic-override={overrides.iconholder2}
+                            className={classNames(
+                              projectcss.all,
+                              sty.iconholder2
+                            )}
+                          >
+                            <ShieldTicksvgIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__elMid
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___21Fc
+                            )}
+                          >
+                            {"Secure"}
+                          </div>
+                        </p.Stack>
+                      ) : null}
+                    </div>
+
+                    <div
+                      data-plasmic-name={"items3"}
+                      data-plasmic-override={overrides.items3}
+                      className={classNames(projectcss.all, sty.items3)}
+                    >
+                      {true ? (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___7Bm9K
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"iconholder3"}
+                            data-plasmic-override={overrides.iconholder3}
+                            className={classNames(
+                              projectcss.all,
+                              sty.iconholder3
+                            )}
+                          >
+                            <FlashsvgIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__xYnHc
+                              )}
+                              role={"img"}
+                            />
+                          </div>
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kuh53
+                            )}
+                          >
+                            {"Fast Transaction"}
+                          </div>
+                        </p.Stack>
+                      ) : null}
+                    </div>
+                  </div>
+                </p.Stack>
+              </p.Stack>
+            </div>
+          </p.Stack>
+
+          <p.Stack
+            as={"section"}
+            data-plasmic-name={"services"}
+            data-plasmic-override={overrides.services}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.services)}
             id={"services" as const}
           >
             <div className={classNames(projectcss.all, sty.freeBox__jDaLa)}>
@@ -559,11 +771,15 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.columns__yx4B1)}
               >
-                <div className={classNames(projectcss.all, sty.column__oS7Oh)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column___06Yeo)}
+                >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img__wSuj)}
-                    displayHeight={"auto" as const}
+                    className={classNames(sty.img__pHFlf)}
+                    displayHeight={"200px" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
@@ -571,7 +787,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("50%" as const)
-                        : ("75%" as const)
+                        : ("200px" as const)
                     }
                     loading={"lazy" as const}
                     src={{
@@ -581,23 +797,17 @@ function PlasmicHomepage__RenderFunc(props: {
                       aspectRatio: undefined
                     }}
                   />
-                </div>
 
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column___06Yeo)}
-                >
-                  <h1
+                  <h3
                     className={classNames(
                       projectcss.all,
-                      projectcss.h1,
+                      projectcss.h3,
                       projectcss.__wab_text,
-                      sty.h1__xDpXy
+                      sty.h3__xDpXy
                     )}
                   >
                     {"Quick Exchange"}
-                  </h1>
+                  </h3>
 
                   <p
                     className={classNames(
@@ -611,89 +821,17 @@ function PlasmicHomepage__RenderFunc(props: {
                       "Exchange your cryptocurrencies easily with the best rate on the market."
                     }
                   </p>
-
-                  <Button
-                    className={classNames("__wab_instance", sty.button__hejp3)}
-                    color={"blue" as const}
-                    startIcon={
-                      <ArrowRightsvgIcon
-                        className={classNames(projectcss.all, sty.svg__ybBk5)}
-                        role={"img"}
-                      />
-                    }
-                  >
-                    {"Learn More"}
-                  </Button>
                 </p.Stack>
-              </p.Stack>
-            </div>
-          </p.Stack>
 
-          <p.Stack
-            as={"section"}
-            data-plasmic-name={"staking"}
-            data-plasmic-override={overrides.staking}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.staking)}
-          >
-            <div
-              data-plasmic-name={"row3"}
-              data-plasmic-override={overrides.row3}
-              className={classNames(projectcss.all, sty.row3)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.columns__aOwuF)}
-              >
                 <p.Stack
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.column__b5VmY)}
+                  className={classNames(projectcss.all, sty.column__oS7Oh)}
                 >
-                  <h1
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h1,
-                      projectcss.__wab_text,
-                      sty.h1__mUpKf
-                    )}
-                  >
-                    {"Staking"}
-                  </h1>
-
-                  <p
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.p,
-                      projectcss.__wab_text,
-                      sty.p___3Cpji
-                    )}
-                  >
-                    {
-                      "Generate cash flow with crypto up to 30% possible, without the complexity and protected by insurance up to $5,000,000*"
-                    }
-                  </p>
-
-                  <Button
-                    className={classNames("__wab_instance", sty.button__slcGq)}
-                    color={"blue" as const}
-                    startIcon={
-                      <ArrowRightsvgIcon
-                        className={classNames(projectcss.all, sty.svg__rbUJg)}
-                        role={"img"}
-                      />
-                    }
-                  >
-                    {"Learn More"}
-                  </Button>
-                </p.Stack>
-
-                <div className={classNames(projectcss.all, sty.column___3JzpE)}>
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img___85Pp7)}
-                    displayHeight={"auto" as const}
+                    className={classNames(sty.img__qtCf5)}
+                    displayHeight={"200px" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
@@ -701,7 +839,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("50%" as const)
-                        : ("75%" as const)
+                        : ("200px" as const)
                     }
                     loading={"lazy" as const}
                     src={{
@@ -711,33 +849,41 @@ function PlasmicHomepage__RenderFunc(props: {
                       aspectRatio: undefined
                     }}
                   />
-                </div>
-              </p.Stack>
-            </div>
-          </p.Stack>
 
-          <p.Stack
-            as={"section"}
-            data-plasmic-name={"custodian"}
-            data-plasmic-override={overrides.custodian}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.custodian)}
-          >
-            <div
-              data-plasmic-name={"row4"}
-              data-plasmic-override={overrides.row4}
-              className={classNames(projectcss.all, sty.row4)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.columns__p54Yz)}
-              >
-                <div className={classNames(projectcss.all, sty.column__otU1E)}>
+                  <h3
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h3,
+                      projectcss.__wab_text,
+                      sty.h3__lS07I
+                    )}
+                  >
+                    {"Staking"}
+                  </h3>
+
+                  <p
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.p,
+                      projectcss.__wab_text,
+                      sty.p__g7Y99
+                    )}
+                  >
+                    {
+                      "Generate cash flow with crypto up to 30% possible, without the complexity and protected by insurance up to $5,000,000*"
+                    }
+                  </p>
+                </p.Stack>
+
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column___6L6QP)}
+                >
                   <p.PlasmicImg
                     alt={""}
-                    className={classNames(sty.img__b9Oiv)}
-                    displayHeight={"auto" as const}
+                    className={classNames(sty.img__nGy0M)}
+                    displayHeight={"200px" as const}
                     displayMaxHeight={"none" as const}
                     displayMaxWidth={"100%" as const}
                     displayMinHeight={"0" as const}
@@ -745,7 +891,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? ("50%" as const)
-                        : ("75%" as const)
+                        : ("200px" as const)
                     }
                     loading={"lazy" as const}
                     src={{
@@ -755,51 +901,278 @@ function PlasmicHomepage__RenderFunc(props: {
                       aspectRatio: undefined
                     }}
                   />
-                </div>
 
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column__glBJo)}
-                >
-                  <h1
+                  <h3
                     className={classNames(
                       projectcss.all,
-                      projectcss.h1,
+                      projectcss.h3,
                       projectcss.__wab_text,
-                      sty.h1__nyPx
+                      sty.h3__qSi21
                     )}
                   >
                     {"Decentralized Exchange"}
-                  </h1>
+                  </h3>
 
                   <p
                     className={classNames(
                       projectcss.all,
                       projectcss.p,
                       projectcss.__wab_text,
-                      sty.p__tgtop
+                      sty.p__c1Izm
                     )}
                   >
                     {
                       "Swap, Earn and Repeat, maximizing to increase your value."
                     }
                   </p>
-
-                  <Button
-                    className={classNames("__wab_instance", sty.button__cBNr)}
-                    color={"blue" as const}
-                    startIcon={
-                      <ArrowRightsvgIcon
-                        className={classNames(projectcss.all, sty.svg__l8X1I)}
-                        role={"img"}
-                      />
-                    }
-                  >
-                    {"Learn More"}
-                  </Button>
                 </p.Stack>
               </p.Stack>
+            </div>
+          </p.Stack>
+
+          <p.Stack
+            as={"section"}
+            data-plasmic-name={"faq"}
+            data-plasmic-override={overrides.faq}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.faq)}
+            id={"faq" as const}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__y7VJ)}>
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__bGwQu
+                )}
+              >
+                {"FAQ"}
+              </h1>
+            </div>
+
+            <div
+              data-plasmic-name={"row3"}
+              data-plasmic-override={overrides.row3}
+              className={classNames(projectcss.all, sty.row3)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox___5Jrnu)}>
+                <div
+                  data-plasmic-name={"faqContent"}
+                  data-plasmic-override={overrides.faqContent}
+                  className={classNames(projectcss.all, sty.faqContent)}
+                >
+                  <Collapse
+                    accordion={false}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.antdCollapse__lcpjb
+                    )}
+                    expandIconPosition={"right" as const}
+                  >
+                    <CollapsePanel
+                      className={classNames(
+                        "__wab_instance",
+                        sty.antdCollapsePanel__gPNua
+                      )}
+                      forceRender={false}
+                      header={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wTvQv
+                          )}
+                        >
+                          {"What is Coinjoss?"}
+                        </div>
+                      }
+                      key={"1" as const}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__zrW8X
+                        )}
+                      >
+                        {(() => {
+                          try {
+                            return "Coinjoss is a user-friendly trading platform for Bitcoin, Etherum and other digital assets that allows its users to participate in projects in the Coinjoss ecosystem. Coinjoss is a Hybrid Exchange-based platform that provides user security through asset storage with the user's own supervision and minimizes risk to maximize opportunities in the ecosystem.";
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return "Insert text here";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </div>
+                    </CollapsePanel>
+                  </Collapse>
+                </div>
+
+                <div
+                  data-plasmic-name={"faqContent2"}
+                  data-plasmic-override={overrides.faqContent2}
+                  className={classNames(projectcss.all, sty.faqContent2)}
+                >
+                  <Collapse
+                    accordion={false}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.antdCollapse___5Zw8R
+                    )}
+                    expandIconPosition={"right" as const}
+                  >
+                    <CollapsePanel
+                      className={classNames(
+                        "__wab_instance",
+                        sty.antdCollapsePanel__h6Seg
+                      )}
+                      forceRender={false}
+                      header={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__t038M
+                          )}
+                        >
+                          {"What are the Services Provided by Coinjoss?"}
+                        </div>
+                      }
+                      key={"1" as const}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cIidM
+                        )}
+                      >
+                        {(() => {
+                          try {
+                            return "The digital asset trading platform provided by Coinjoss offers user friendly features and all the basic features seen on the platform. The Coinjoss trading exchange is powered by crypto-fiat pairs using Rupiah (IDR)";
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return "Insert text here";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </div>
+                    </CollapsePanel>
+                  </Collapse>
+                </div>
+
+                <div
+                  data-plasmic-name={"faqContent3"}
+                  data-plasmic-override={overrides.faqContent3}
+                  className={classNames(projectcss.all, sty.faqContent3)}
+                >
+                  <Collapse
+                    accordion={false}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.antdCollapse__waeh7
+                    )}
+                    expandIconPosition={"right" as const}
+                  >
+                    <CollapsePanel
+                      className={classNames(
+                        "__wab_instance",
+                        sty.antdCollapsePanel__zbi9U
+                      )}
+                      forceRender={false}
+                      header={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__mkQJj
+                          )}
+                        >
+                          {"What is Quick Exchange"}
+                        </div>
+                      }
+                      key={"1" as const}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___0YOik
+                        )}
+                      >
+                        {(() => {
+                          try {
+                            return "The digital asset trading platform provided by Coinjoss offers user friendly features and all the basic features seen on the platform. The Coinjoss trading exchange is powered by crypto-fiat pairs using Rupiah (IDR).";
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return "Insert text here";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </div>
+                    </CollapsePanel>
+                  </Collapse>
+                </div>
+
+                <div
+                  data-plasmic-name={"faqContent4"}
+                  data-plasmic-override={overrides.faqContent4}
+                  className={classNames(projectcss.all, sty.faqContent4)}
+                >
+                  <Collapse
+                    accordion={false}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.antdCollapse__lAxIh
+                    )}
+                    expandIconPosition={"right" as const}
+                  >
+                    <CollapsePanel
+                      className={classNames(
+                        "__wab_instance",
+                        sty.antdCollapsePanel__xjkoz
+                      )}
+                      forceRender={false}
+                      header={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__i7G6L
+                          )}
+                        >
+                          {"What is Staking"}
+                        </div>
+                      }
+                      key={"1" as const}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___9JHj9
+                        )}
+                      >
+                        {(() => {
+                          try {
+                            return "If the user chooses not to put a pair of assets, the user can also put a single asset through the staking mechanism. Users will also get rewards in the form of JOSS.";
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return "Insert text here";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </div>
+                    </CollapsePanel>
+                  </Collapse>
+                </div>
+              </div>
             </div>
           </p.Stack>
 
@@ -821,13 +1194,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.freeBox__oBmxQ)}
               >
                 <h3
-                  data-plasmic-name={"h3"}
-                  data-plasmic-override={overrides.h3}
                   className={classNames(
                     projectcss.all,
                     projectcss.h3,
                     projectcss.__wab_text,
-                    sty.h3
+                    sty.h3__vyLrS
                   )}
                 >
                   {
@@ -1031,409 +1402,11 @@ function PlasmicHomepage__RenderFunc(props: {
             </div>
           </p.Stack>
 
-          <p.Stack
-            as={"section"}
+          <Footer
             data-plasmic-name={"footer"}
             data-plasmic-override={overrides.footer}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.footer)}
-          >
-            <div
-              data-plasmic-name={"row7"}
-              data-plasmic-override={overrides.row7}
-              className={classNames(projectcss.all, sty.row7)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.columns__nZurg)}
-              >
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column___2B2Ig)}
-                >
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__wbF9A)}
-                    displayHeight={"32px" as const}
-                    displayMaxHeight={"none" as const}
-                    displayMaxWidth={"100%" as const}
-                    displayMinHeight={"0" as const}
-                    displayMinWidth={"0" as const}
-                    displayWidth={"auto" as const}
-                    loading={"lazy" as const}
-                    src={{
-                      src: "/plasmic/coinjoss_com/images/logo1Coinjosspng.png",
-                      fullWidth: 1095,
-                      fullHeight: 174,
-                      aspectRatio: undefined
-                    }}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___8Gmi
-                    )}
-                  >
-                    {
-                      "Jl. Danau Tamblingan No.160, Sanur, Denpasar,\nBali 80228"
-                    }
-                  </div>
-                </p.Stack>
-
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column___3C5Kl)}
-                >
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__fhxpB
-                    )}
-                    component={Link}
-                    href={"https://blog.coinjoss.com/" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__xx5Na
-                      )}
-                    >
-                      {"Blog"}
-                    </div>
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__kLstT
-                    )}
-                    component={Link}
-                    href={"https://platform.coinjoss.com/login" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__nPuXi
-                      )}
-                    >
-                      {"Quick Exchange"}
-                    </div>
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link___6It1I
-                    )}
-                    component={Link}
-                    href={"https://platform.coinjoss.com/login" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vLaXy
-                      )}
-                    >
-                      {"Staking"}
-                    </div>
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link___3Typa
-                    )}
-                    component={Link}
-                    href={"https://platform.coinjoss.com/login" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kN1N
-                      )}
-                    >
-                      {"Decentralized Exchange"}
-                    </div>
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__lTr7K
-                    )}
-                    component={Link}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vKMgK
-                      )}
-                    >
-                      {"Josscare"}
-                    </div>
-                  </p.PlasmicLink>
-                </p.Stack>
-
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column___9LkZg)}
-                >
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__b3Uko
-                    )}
-                    component={Link}
-                    href={"https://coinjoss.com/term-and-conditions" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__wlReT
-                      )}
-                    >
-                      {"Terms of Service"}
-                    </div>
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__e9ATu
-                    )}
-                    component={Link}
-                    href={"https://coinjoss.com/privacy-policy" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__zjy1H
-                      )}
-                    >
-                      {"Privacy Policy"}
-                    </div>
-                  </p.PlasmicLink>
-
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__d6IBw
-                    )}
-                    component={Link}
-                    href={"https://coinjoss.com/faq" as const}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__fhmRy
-                      )}
-                    >
-                      {"FAQ"}
-                    </div>
-                  </p.PlasmicLink>
-                </p.Stack>
-
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.column__bRgNm)}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__sq48G)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__qYjd
-                      )}
-                    >
-                      {"Our Social Media"}
-                    </div>
-                  </div>
-
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"socmedWrapper"}
-                    data-plasmic-override={overrides.socmedWrapper}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.socmedWrapper)}
-                  >
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed"}
-                      data-plasmic-override={overrides.socmed}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed
-                      )}
-                      component={Link}
-                      href={
-                        "https://www.facebook.com/coinjossofficial" as const
-                      }
-                      platform={"nextjs"}
-                    >
-                      <FacebookSvgrepoComsvgIcon
-                        className={classNames(projectcss.all, sty.svg__nfgN)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed2"}
-                      data-plasmic-override={overrides.socmed2}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed2
-                      )}
-                      component={Link}
-                      href={
-                        "https://www.instagram.com/coinjossofficial/" as const
-                      }
-                      platform={"nextjs"}
-                    >
-                      <InstagramSvgrepoCom1SvgIcon
-                        className={classNames(projectcss.all, sty.svg__kn5Tz)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed3"}
-                      data-plasmic-override={overrides.socmed3}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed3
-                      )}
-                      component={Link}
-                      href={"https://twitter.com/coinjoss" as const}
-                      platform={"nextjs"}
-                    >
-                      <TwitterSvgrepoComsvgIcon
-                        className={classNames(projectcss.all, sty.svg__o97I)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed4"}
-                      data-plasmic-override={overrides.socmed4}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed4
-                      )}
-                      component={Link}
-                      href={"https://medium.com/coinjoss" as const}
-                      platform={"nextjs"}
-                    >
-                      <MediumCircleSvgrepoComsvgIcon
-                        className={classNames(projectcss.all, sty.svg__hk4Ul)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed5"}
-                      data-plasmic-override={overrides.socmed5}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed5
-                      )}
-                      component={Link}
-                      href={
-                        "https://www.linkedin.com/company/coinjoss/" as const
-                      }
-                      platform={"nextjs"}
-                    >
-                      <LinkedinSvgrepoComsvgIcon
-                        className={classNames(projectcss.all, sty.svg__sIr7E)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed6"}
-                      data-plasmic-override={overrides.socmed6}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed6
-                      )}
-                      component={Link}
-                      platform={"nextjs"}
-                    >
-                      <DiscordSvgrepoComsvgIcon
-                        className={classNames(projectcss.all, sty.svg__pq087)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-
-                    <p.PlasmicLink
-                      data-plasmic-name={"socmed7"}
-                      data-plasmic-override={overrides.socmed7}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.socmed7
-                      )}
-                      component={Link}
-                      href={"https://t.me/CoinjossChannel" as const}
-                      platform={"nextjs"}
-                    >
-                      <TelegramSvgrepoCom2SvgIcon
-                        className={classNames(projectcss.all, sty.svg__o0UMm)}
-                        role={"img"}
-                      />
-                    </p.PlasmicLink>
-                  </p.Stack>
-                </p.Stack>
-              </p.Stack>
-            </div>
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__ggGt
-              )}
-            >
-              {"© 2019 - 2022 Coinjoss.com. All rights reserved"}
-            </div>
-          </p.Stack>
+            className={classNames("__wab_instance", sty.footer)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -1448,84 +1421,78 @@ const PlasmicDescendants = {
     "hero",
     "row",
     "h6",
-    "exchange",
+    "about",
+    "row7",
+    "items",
+    "iconholder",
+    "items2",
+    "iconholder2",
+    "items3",
+    "iconholder3",
+    "services",
     "row2",
-    "staking",
+    "faq",
     "row3",
-    "custodian",
-    "row4",
+    "faqContent",
+    "faqContent2",
+    "faqContent3",
+    "faqContent4",
     "cta",
     "row6",
-    "h3",
     "partner",
     "row5",
-    "footer",
-    "row7",
-    "socmedWrapper",
-    "socmed",
-    "socmed2",
-    "socmed3",
-    "socmed4",
-    "socmed5",
-    "socmed6",
-    "socmed7"
+    "footer"
   ],
   navbar: ["navbar", "navigationBar"],
   navigationBar: ["navigationBar"],
   hero: ["hero", "row", "h6"],
   row: ["row", "h6"],
   h6: ["h6"],
-  exchange: ["exchange", "row2"],
-  row2: ["row2"],
-  staking: ["staking", "row3"],
-  row3: ["row3"],
-  custodian: ["custodian", "row4"],
-  row4: ["row4"],
-  cta: ["cta", "row6", "h3"],
-  row6: ["row6", "h3"],
-  h3: ["h3"],
-  partner: ["partner", "row5"],
-  row5: ["row5"],
-  footer: [
-    "footer",
+  about: [
+    "about",
     "row7",
-    "socmedWrapper",
-    "socmed",
-    "socmed2",
-    "socmed3",
-    "socmed4",
-    "socmed5",
-    "socmed6",
-    "socmed7"
+    "items",
+    "iconholder",
+    "items2",
+    "iconholder2",
+    "items3",
+    "iconholder3"
   ],
   row7: [
     "row7",
-    "socmedWrapper",
-    "socmed",
-    "socmed2",
-    "socmed3",
-    "socmed4",
-    "socmed5",
-    "socmed6",
-    "socmed7"
+    "items",
+    "iconholder",
+    "items2",
+    "iconholder2",
+    "items3",
+    "iconholder3"
   ],
-  socmedWrapper: [
-    "socmedWrapper",
-    "socmed",
-    "socmed2",
-    "socmed3",
-    "socmed4",
-    "socmed5",
-    "socmed6",
-    "socmed7"
+  items: ["items", "iconholder"],
+  iconholder: ["iconholder"],
+  items2: ["items2", "iconholder2"],
+  iconholder2: ["iconholder2"],
+  items3: ["items3", "iconholder3"],
+  iconholder3: ["iconholder3"],
+  services: ["services", "row2"],
+  row2: ["row2"],
+  faq: [
+    "faq",
+    "row3",
+    "faqContent",
+    "faqContent2",
+    "faqContent3",
+    "faqContent4"
   ],
-  socmed: ["socmed"],
-  socmed2: ["socmed2"],
-  socmed3: ["socmed3"],
-  socmed4: ["socmed4"],
-  socmed5: ["socmed5"],
-  socmed6: ["socmed6"],
-  socmed7: ["socmed7"]
+  row3: ["row3", "faqContent", "faqContent2", "faqContent3", "faqContent4"],
+  faqContent: ["faqContent"],
+  faqContent2: ["faqContent2"],
+  faqContent3: ["faqContent3"],
+  faqContent4: ["faqContent4"],
+  cta: ["cta", "row6"],
+  row6: ["row6"],
+  partner: ["partner", "row5"],
+  row5: ["row5"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1537,27 +1504,27 @@ type NodeDefaultElementType = {
   hero: "section";
   row: "div";
   h6: "h6";
-  exchange: "section";
+  about: "section";
+  row7: "div";
+  items: "div";
+  iconholder: "div";
+  items2: "div";
+  iconholder2: "div";
+  items3: "div";
+  iconholder3: "div";
+  services: "section";
   row2: "div";
-  staking: "section";
+  faq: "section";
   row3: "div";
-  custodian: "section";
-  row4: "div";
+  faqContent: "div";
+  faqContent2: "div";
+  faqContent3: "div";
+  faqContent4: "div";
   cta: "section";
   row6: "div";
-  h3: "h3";
   partner: "section";
   row5: "div";
-  footer: "section";
-  row7: "div";
-  socmedWrapper: "div";
-  socmed: "a";
-  socmed2: "a";
-  socmed3: "a";
-  socmed4: "a";
-  socmed5: "a";
-  socmed6: "a";
-  socmed7: "a";
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1626,27 +1593,27 @@ export const PlasmicHomepage = Object.assign(
     hero: makeNodeComponent("hero"),
     row: makeNodeComponent("row"),
     h6: makeNodeComponent("h6"),
-    exchange: makeNodeComponent("exchange"),
+    about: makeNodeComponent("about"),
+    row7: makeNodeComponent("row7"),
+    items: makeNodeComponent("items"),
+    iconholder: makeNodeComponent("iconholder"),
+    items2: makeNodeComponent("items2"),
+    iconholder2: makeNodeComponent("iconholder2"),
+    items3: makeNodeComponent("items3"),
+    iconholder3: makeNodeComponent("iconholder3"),
+    services: makeNodeComponent("services"),
     row2: makeNodeComponent("row2"),
-    staking: makeNodeComponent("staking"),
+    faq: makeNodeComponent("faq"),
     row3: makeNodeComponent("row3"),
-    custodian: makeNodeComponent("custodian"),
-    row4: makeNodeComponent("row4"),
+    faqContent: makeNodeComponent("faqContent"),
+    faqContent2: makeNodeComponent("faqContent2"),
+    faqContent3: makeNodeComponent("faqContent3"),
+    faqContent4: makeNodeComponent("faqContent4"),
     cta: makeNodeComponent("cta"),
     row6: makeNodeComponent("row6"),
-    h3: makeNodeComponent("h3"),
     partner: makeNodeComponent("partner"),
     row5: makeNodeComponent("row5"),
     footer: makeNodeComponent("footer"),
-    row7: makeNodeComponent("row7"),
-    socmedWrapper: makeNodeComponent("socmedWrapper"),
-    socmed: makeNodeComponent("socmed"),
-    socmed2: makeNodeComponent("socmed2"),
-    socmed3: makeNodeComponent("socmed3"),
-    socmed4: makeNodeComponent("socmed4"),
-    socmed5: makeNodeComponent("socmed5"),
-    socmed6: makeNodeComponent("socmed6"),
-    socmed7: makeNodeComponent("socmed7"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
