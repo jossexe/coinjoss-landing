@@ -952,7 +952,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h1__bGwQu
                 )}
               >
-                {"Market"}
+                {"Markets"}
               </h1>
             </div>
 
