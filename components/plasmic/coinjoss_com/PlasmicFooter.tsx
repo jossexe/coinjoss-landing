@@ -241,7 +241,9 @@ function PlasmicFooter__RenderFunc(props: {
                 sty.link__bMeDb
               )}
               component={Link}
-              href={"https://platform.coinjoss.com/login" as const}
+              href={
+                "https://coinjoss-87w3b73jc-rezaprimasatya.vercel.app/swap" as const
+              }
               platform={"nextjs"}
             >
               <div

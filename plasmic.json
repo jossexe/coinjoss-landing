@@ -100,6 +100,32 @@
           "cssFilePath": "plasmic/coinjoss_com/PlasmicService.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "62Il59Ijvz",
+          "name": "PercentChange",
+          "type": "managed",
+          "projectId": "sMfv1hg7t9bpqK5N2h2Xpc",
+          "renderModuleFilePath": "plasmic/coinjoss_com/PlasmicPercentChange.tsx",
+          "importSpec": {
+            "modulePath": "PercentChange.tsx"
+          },
+          "cssFilePath": "plasmic/coinjoss_com/PlasmicPercentChange.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "GHrZX-qnlG",
+          "name": "PriceCard",
+          "type": "managed",
+          "projectId": "sMfv1hg7t9bpqK5N2h2Xpc",
+          "renderModuleFilePath": "plasmic/coinjoss_com/PlasmicPriceCard.tsx",
+          "importSpec": {
+            "modulePath": "PriceCard.tsx"
+          },
+          "cssFilePath": "plasmic/coinjoss_com/PlasmicPriceCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -167,6 +193,56 @@
           "id": "QKB6RJd74E",
           "name": "FlashsvgIcon",
           "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Flashsvg.tsx"
+        },
+        {
+          "id": "APEFRjHk9f",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon2.tsx"
+        },
+        {
+          "id": "gK8wloD7bf",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon3.tsx"
+        },
+        {
+          "id": "4TUkBRaSUJ",
+          "name": "Icon4Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon4.tsx"
+        },
+        {
+          "id": "44iUqi7ALL",
+          "name": "Icon5Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon5.tsx"
+        },
+        {
+          "id": "EEfbul6dCZ",
+          "name": "Icon6Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon6.tsx"
+        },
+        {
+          "id": "mW29iQjOi4",
+          "name": "Icon7Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon7.tsx"
+        },
+        {
+          "id": "2GxFK8nmf9",
+          "name": "Icon8Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon8.tsx"
+        },
+        {
+          "id": "NSdoEEgYbD",
+          "name": "Icon9Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon9.tsx"
+        },
+        {
+          "id": "JlukcmvCZ",
+          "name": "Icon10Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon10.tsx"
+        },
+        {
+          "id": "McB3OMMtcT",
+          "name": "Icon11Icon",
+          "moduleFilePath": "plasmic/coinjoss_com/icons/PlasmicIcon__Icon11.tsx"
         }
       ],
       "images": [
@@ -452,6 +528,31 @@
           "id": "aOob39p1-Dlv",
           "name": "TableValue",
           "componentImportPath": "@plasmicpkgs/antd/skinny/registerTable"
+        }
+      ],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "YUiM7yqBWAqsh8KSnrdj7",
+      "projectApiToken": "yLKpJOE8mD6HqoNCSWF3Em8ut0LBzL7qb3QPqNeOLPjQsSBSc12yhYovnSRSekzgt1xjjbugBGDjOMLGMK4w",
+      "projectName": "plasmic-query",
+      "version": "0.7.0",
+      "cssFilePath": "plasmic/plasmic_query/plasmic_plasmic_query.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "ae7V86eNoXA",
+          "name": "DataFetcher",
+          "componentImportPath": "@plasmicpkgs/plasmic-query"
+        },
+        {
+          "id": "0DrxdjD45dkx",
+          "name": "GraphqlFetcher",
+          "componentImportPath": "@plasmicpkgs/plasmic-query"
         }
       ]
     }

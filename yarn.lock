@@ -630,6 +630,13 @@
   resolved "https://registry.yarnpkg.com/@plasmicpkgs/plasmic-nav/-/plasmic-nav-0.0.51.tgz#6d0a4b858daf8eb183c25de3bf12a4cf48ee97b8"
   integrity sha512-q5kNWxsR+sB3/PnBv6as69cePnEThrbqvTpqx5Ejlwc/3H0HcOCZ0KyUbWgNnLoHsMQmf5/Fr+AbJuVINYg+cQ==
 
+"@plasmicpkgs/plasmic-query@^0.0.95":
+  version "0.0.95"
+  resolved "https://registry.yarnpkg.com/@plasmicpkgs/plasmic-query/-/plasmic-query-0.0.95.tgz#011c2fd8bc44ebec354297aed5196316f96e0667"
+  integrity sha512-S7osDWM2fi6/C/icyim0dQhYIFr9cVsf24F8XVjGAzJoQAj0Y9kO/Dr+g4Z61//KDfSHuaAP7CFS6qwPdhaxxw==
+  dependencies:
+    "@plasmicapp/query" "0.1.55"
+
 "@rc-component/portal@^1.0.0-6", "@rc-component/portal@^1.0.0-8":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@rc-component/portal/-/portal-1.0.2.tgz#c14cdd21e7da42c0db417ce01c624df170349ec6"

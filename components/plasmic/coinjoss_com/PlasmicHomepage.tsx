@@ -36,8 +36,9 @@ import {
 } from "@plasmicapp/react-web";
 import { NavigationBar } from "@plasmicpkgs/plasmic-nav"; // plasmic-import: jGx9tiKJoex/codeComponent
 import Button from "../../Button"; // plasmic-import: B2AzBChSZBa/component
-import { Collapse } from "@plasmicpkgs/antd/skinny/registerCollapse"; // plasmic-import: F10gpQ1ZhXY/codeComponent
-import CollapsePanel from "antd/lib/collapse/CollapsePanel"; // plasmic-import: yegZ392NLoV/codeComponent
+import PriceCard from "../../PriceCard"; // plasmic-import: GHrZX-qnlG/component
+import { DataFetcher } from "@plasmicpkgs/plasmic-query"; // plasmic-import: ae7V86eNoXA/codeComponent
+import PercentChange from "../../PercentChange"; // plasmic-import: 62Il59Ijvz/component
 import Footer from "../../Footer"; // plasmic-import: kSpHVPuP15V/component
 
 import { useScreenVariants as useScreenVariantsoR09Sl7PmsYzr } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: oR09Sl7pmsYZR/globalVariant
@@ -53,6 +54,14 @@ import ArrowRightsvgIcon from "./icons/PlasmicIcon__ArrowRightsvg"; // plasmic-i
 import LikesvgIcon from "./icons/PlasmicIcon__Likesvg"; // plasmic-import: 8BF27-mrmX/icon
 import ShieldTicksvgIcon from "./icons/PlasmicIcon__ShieldTicksvg"; // plasmic-import: sbvd34TJQy/icon
 import FlashsvgIcon from "./icons/PlasmicIcon__Flashsvg"; // plasmic-import: QKB6RJd74E/icon
+import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: APEFRjHk9f/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: 44iUqi7ALL/icon
+import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: EEfbul6dCZ/icon
+import Icon7Icon from "./icons/PlasmicIcon__Icon7"; // plasmic-import: mW29iQjOi4/icon
+import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: 2GxFK8nmf9/icon
+import Icon9Icon from "./icons/PlasmicIcon__Icon9"; // plasmic-import: NSdoEEgYbD/icon
+import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: JlukcmvCZ/icon
+import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: McB3OMMtcT/icon
 
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
@@ -82,10 +91,6 @@ export type PlasmicHomepage__OverridesType = {
   row2?: p.Flex<"div">;
   faq?: p.Flex<"section">;
   row3?: p.Flex<"div">;
-  faqContent?: p.Flex<"div">;
-  faqContent2?: p.Flex<"div">;
-  faqContent3?: p.Flex<"div">;
-  faqContent4?: p.Flex<"div">;
   cta?: p.Flex<"section">;
   row6?: p.Flex<"div">;
   partner?: p.Flex<"section">;
@@ -947,7 +952,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.h1__bGwQu
                 )}
               >
-                {"FAQ"}
+                {"Market"}
               </h1>
             </div>
 
@@ -956,222 +961,980 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.row3}
               className={classNames(projectcss.all, sty.row3)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox___5Jrnu)}>
-                <div
-                  data-plasmic-name={"faqContent"}
-                  data-plasmic-override={overrides.faqContent}
-                  className={classNames(projectcss.all, sty.faqContent)}
-                >
-                  <Collapse
-                    accordion={false}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.antdCollapse__lcpjb
-                    )}
-                    expandIconPosition={"right" as const}
-                  >
-                    <CollapsePanel
+              <div className={classNames(projectcss.all, sty.freeBox__b0EmC)}>
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__gPquF)}
+                  content={
+                    <DataFetcher
                       className={classNames(
                         "__wab_instance",
-                        sty.antdCollapsePanel__gPNua
+                        sty.httpApiFetcher___7IO2U
                       )}
-                      forceRender={false}
-                      header={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__wTvQv
-                          )}
-                        >
-                          {"What is Coinjoss?"}
-                        </div>
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
                       }
-                      key={"1" as const}
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/BTC_IDR" as const
+                      }
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__zrW8X
-                        )}
-                      >
-                        {(() => {
-                          try {
-                            return "Coinjoss is a user-friendly trading platform for Bitcoin, Etherum and other digital assets that allows its users to participate in projects in the Coinjoss ecosystem. Coinjoss is a Hybrid Exchange-based platform that provides user security through asset storage with the user's own supervision and minimizes risk to maximize opportunities in the ecosystem.";
-                          } catch (e) {
-                            if (e instanceof TypeError) {
-                              return "Insert text here";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </div>
-                    </CollapsePanel>
-                  </Collapse>
-                </div>
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__jwa0D
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span__aIhbP
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 325.710.973,63";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
 
-                <div
-                  data-plasmic-name={"faqContent2"}
-                  data-plasmic-override={overrides.faqContent2}
-                  className={classNames(projectcss.all, sty.faqContent2)}
-                >
-                  <Collapse
-                    accordion={false}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.antdCollapse___5Zw8R
-                    )}
-                    expandIconPosition={"right" as const}
-                  >
-                    <CollapsePanel
-                      className={classNames(
-                        "__wab_instance",
-                        sty.antdCollapsePanel__h6Seg
-                      )}
-                      forceRender={false}
-                      header={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__t038M
-                          )}
-                        >
-                          {"What are the Services Provided by Coinjoss?"}
-                        </div>
-                      }
-                      key={"1" as const}
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange__yEv6C
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__s4GfZ)}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__cIidM
-                        )}
-                      >
-                        {(() => {
-                          try {
-                            return "The digital asset trading platform provided by Coinjoss offers user friendly features and all the basic features seen on the platform. The Coinjoss trading exchange is powered by crypto-fiat pairs using Rupiah (IDR)";
-                          } catch (e) {
-                            if (e instanceof TypeError) {
-                              return "Insert text here";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </div>
-                    </CollapsePanel>
-                  </Collapse>
-                </div>
+                      <Icon2Icon
+                        className={classNames(projectcss.all, sty.svg__mbiwf)}
+                        role={"img"}
+                      />
 
-                <div
-                  data-plasmic-name={"faqContent3"}
-                  data-plasmic-override={overrides.faqContent3}
-                  className={classNames(projectcss.all, sty.faqContent3)}
-                >
-                  <Collapse
-                    accordion={false}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.antdCollapse__waeh7
-                    )}
-                    expandIconPosition={"right" as const}
-                  >
-                    <CollapsePanel
-                      className={classNames(
-                        "__wab_instance",
-                        sty.antdCollapsePanel__zbi9U
-                      )}
-                      forceRender={false}
-                      header={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__mkQJj
-                          )}
-                        >
-                          {"What is Quick Exchange"}
-                        </div>
-                      }
-                      key={"1" as const}
-                    >
-                      <div
+                      <h4
                         className={classNames(
                           projectcss.all,
+                          projectcss.h4,
                           projectcss.__wab_text,
-                          sty.text___0YOik
+                          sty.h4___9U2T8
                         )}
                       >
-                        {(() => {
-                          try {
-                            return "The digital asset trading platform provided by Coinjoss offers user friendly features and all the basic features seen on the platform. The Coinjoss trading exchange is powered by crypto-fiat pairs using Rupiah (IDR).";
-                          } catch (e) {
-                            if (e instanceof TypeError) {
-                              return "Insert text here";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </div>
-                    </CollapsePanel>
-                  </Collapse>
-                </div>
+                        {"BTC / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
 
-                <div
-                  data-plasmic-name={"faqContent4"}
-                  data-plasmic-override={overrides.faqContent4}
-                  className={classNames(projectcss.all, sty.faqContent4)}
-                >
-                  <Collapse
-                    accordion={false}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.antdCollapse__lAxIh
-                    )}
-                    expandIconPosition={"right" as const}
-                  >
-                    <CollapsePanel
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__dVoRx)}
+                  content={
+                    <DataFetcher
                       className={classNames(
                         "__wab_instance",
-                        sty.antdCollapsePanel__xjkoz
+                        sty.httpApiFetcher__qznxz
                       )}
-                      forceRender={false}
-                      header={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__i7G6L
-                          )}
-                        >
-                          {"What is Staking"}
-                        </div>
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
                       }
-                      key={"1" as const}
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/ETH_IDR" as const
+                      }
                     >
-                      <div
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__hk52W
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span__iQdZo
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 24.781.862,80";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
+
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange___9X7Qh
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___4OUxv
+                      )}
+                    >
+                      <Icon5Icon
+                        className={classNames(projectcss.all, sty.svg__heUdJ)}
+                        role={"img"}
+                      />
+
+                      <h4
                         className={classNames(
                           projectcss.all,
+                          projectcss.h4,
                           projectcss.__wab_text,
-                          sty.text___9JHj9
+                          sty.h4__lFTdy
                         )}
                       >
-                        {(() => {
-                          try {
-                            return "If the user chooses not to put a pair of assets, the user can also put a single asset through the staking mechanism. Users will also get rewards in the form of JOSS.";
-                          } catch (e) {
-                            if (e instanceof TypeError) {
-                              return "Insert text here";
+                        {"ETH / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
+
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__oNoXm)}
+                  content={
+                    <DataFetcher
+                      className={classNames(
+                        "__wab_instance",
+                        sty.httpApiFetcher__hobw
+                      )}
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
+                      }
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/USDT_IDR" as const
+                      }
+                    >
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__jyNp
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span__toWq1
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 15.673,55";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
+
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange__z4EWn
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__s9Glk)}
+                    >
+                      <Icon6Icon
+                        className={classNames(projectcss.all, sty.svg__eAt0V)}
+                        role={"img"}
+                      />
+
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4__fruWo
+                        )}
+                      >
+                        {"USDT / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
+
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__e6Qhn)}
+                  content={
+                    <DataFetcher
+                      className={classNames(
+                        "__wab_instance",
+                        sty.httpApiFetcher__jXCrs
+                      )}
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
+                      }
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/BNB_IDR" as const
+                      }
+                    >
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__gy5Jb
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span__ex6Y4
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 5.169.438,97";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
+
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange__iyjTe
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__kFaLs)}
+                    >
+                      <Icon7Icon
+                        className={classNames(projectcss.all, sty.svg__rdxct)}
+                        role={"img"}
+                      />
+
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4__oak
+                        )}
+                      >
+                        {"BNB / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
+
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__tumSh)}
+                  content={
+                    <DataFetcher
+                      className={classNames(
+                        "__wab_instance",
+                        sty.httpApiFetcher___3HLjj
+                      )}
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
+                      }
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/MATIC_IDR" as const
+                      }
+                    >
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___5Vl9Q
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span__bvqXj
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 19.355,52";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
+
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange__onepi
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__slcdf)}
+                    >
+                      <Icon8Icon
+                        className={classNames(projectcss.all, sty.svg__ibYyM)}
+                        role={"img"}
+                      />
+
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4___2JC1
+                        )}
+                      >
+                        {"MATIC / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
+
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__wGkFt)}
+                  content={
+                    <DataFetcher
+                      className={classNames(
+                        "__wab_instance",
+                        sty.httpApiFetcher__lhVqU
+                      )}
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
+                      }
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/SOL_IDR" as const
+                      }
+                    >
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__m2FM
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span__i8LPj
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 496.033,45";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
+
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange__p5G1R
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__tkvfz)}
+                    >
+                      <Icon9Icon
+                        className={classNames(projectcss.all, sty.svg__mIysO)}
+                        role={"img"}
+                      />
+
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4___3UGb
+                        )}
+                      >
+                        {"SOL / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
+
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__nZBhc)}
+                  content={
+                    <DataFetcher
+                      className={classNames(
+                        "__wab_instance",
+                        sty.httpApiFetcher__tQlYn
+                      )}
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
+                      }
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/DOT_IDR" as const
+                      }
+                    >
+                      <ph.DataCtxReader>
+                        {$ctx =>
+                          true ? (
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__pBst3
+                              )}
+                            >
+                              <span
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.span,
+                                  projectcss.__wab_text,
+                                  sty.span___3KIp8
+                                )}
+                              >
+                                {(() => {
+                                  try {
+                                    return new Intl.NumberFormat("id-ID", {
+                                      style: "currency",
+                                      currency: "IDR"
+                                    }).format($ctx.fetchedData.data.sell);
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Rp 110.683,85";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </span>
+
+                              <PercentChange
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.percentChange___9UqQg
+                                )}
+                                minus={
+                                  $ctx.fetchedData.data.percent_change <= 0
+                                }
+                              >
+                                {(() => {
+                                  try {
+                                    return (
+                                      $ctx.fetchedData.data.percent_change +
+                                      " %"
+                                    );
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return "Enter some text";
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                              </PercentChange>
+                            </p.Stack>
+                          ) : null
+                        }
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__lumQb)}
+                    >
+                      <Icon10Icon
+                        className={classNames(projectcss.all, sty.svg__kInIt)}
+                        role={"img"}
+                      />
+
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4___4PgtU
+                        )}
+                      >
+                        {"DOT / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
+
+                <PriceCard
+                  className={classNames("__wab_instance", sty.priceCard__gzW54)}
+                  content={
+                    <DataFetcher
+                      className={classNames(
+                        "__wab_instance",
+                        sty.httpApiFetcher__s7WxO
+                      )}
+                      dataName={"fetchedData" as const}
+                      errorDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Error fetching data"}
+                        </ph.DataCtxReader>
+                      }
+                      headers={{
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                      }}
+                      loadingDisplay={
+                        <ph.DataCtxReader>
+                          {$ctx => "Loading..."}
+                        </ph.DataCtxReader>
+                      }
+                      method={"GET" as const}
+                      noLayout={false}
+                      url={
+                        "https://price.coinjoss.com/v1/price/DOT_IDR" as const
+                      }
+                    >
+                      <ph.DataCtxReader>
+                        {$ctx => (
+                          <DataFetcher
+                            className={classNames(
+                              "__wab_instance",
+                              sty.httpApiFetcher___9QlxL
+                            )}
+                            dataName={"fetchedData" as const}
+                            errorDisplay={
+                              <ph.DataCtxReader>
+                                {$ctx => "Error fetching data"}
+                              </ph.DataCtxReader>
                             }
-                            throw e;
-                          }
-                        })()}
-                      </div>
-                    </CollapsePanel>
-                  </Collapse>
-                </div>
+                            headers={{
+                              "Content-Type": "application/json",
+                              Accept: "application/json"
+                            }}
+                            loadingDisplay={
+                              <ph.DataCtxReader>
+                                {$ctx => "Loading..."}
+                              </ph.DataCtxReader>
+                            }
+                            method={"GET" as const}
+                            noLayout={false}
+                            url={
+                              "https://price.coinjoss.com/v1/price/ADA_IDR" as const
+                            }
+                          >
+                            <ph.DataCtxReader>
+                              {$ctx =>
+                                true ? (
+                                  <p.Stack
+                                    as={"div"}
+                                    hasGap={true}
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__ag83I
+                                    )}
+                                  >
+                                    <span
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.span,
+                                        projectcss.__wab_text,
+                                        sty.span__jge3
+                                      )}
+                                    >
+                                      {(() => {
+                                        try {
+                                          return new Intl.NumberFormat(
+                                            "id-ID",
+                                            {
+                                              style: "currency",
+                                              currency: "IDR"
+                                            }
+                                          ).format($ctx.fetchedData.data.sell);
+                                        } catch (e) {
+                                          if (e instanceof TypeError) {
+                                            return "Rp 6.411.48";
+                                          }
+                                          throw e;
+                                        }
+                                      })()}
+                                    </span>
+
+                                    <PercentChange
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.percentChange__twMha
+                                      )}
+                                      minus={
+                                        $ctx.fetchedData.data.percent_change <=
+                                        0
+                                      }
+                                    >
+                                      {(() => {
+                                        try {
+                                          return (
+                                            $ctx.fetchedData.data
+                                              .percent_change + " %"
+                                          );
+                                        } catch (e) {
+                                          if (e instanceof TypeError) {
+                                            return "Enter some text";
+                                          }
+                                          throw e;
+                                        }
+                                      })()}
+                                    </PercentChange>
+                                  </p.Stack>
+                                ) : null
+                              }
+                            </ph.DataCtxReader>
+                          </DataFetcher>
+                        )}
+                      </ph.DataCtxReader>
+                    </DataFetcher>
+                  }
+                  header={
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__ft6Pl)}
+                    >
+                      <Icon11Icon
+                        className={classNames(projectcss.all, sty.svg__ewknJ)}
+                        role={"img"}
+                      />
+
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4__hxAri
+                        )}
+                      >
+                        {"ADA / IDR"}
+                      </h4>
+                    </p.Stack>
+                  }
+                />
               </div>
             </div>
           </p.Stack>
@@ -1433,10 +2196,6 @@ const PlasmicDescendants = {
     "row2",
     "faq",
     "row3",
-    "faqContent",
-    "faqContent2",
-    "faqContent3",
-    "faqContent4",
     "cta",
     "row6",
     "partner",
@@ -1475,19 +2234,8 @@ const PlasmicDescendants = {
   iconholder3: ["iconholder3"],
   services: ["services", "row2"],
   row2: ["row2"],
-  faq: [
-    "faq",
-    "row3",
-    "faqContent",
-    "faqContent2",
-    "faqContent3",
-    "faqContent4"
-  ],
-  row3: ["row3", "faqContent", "faqContent2", "faqContent3", "faqContent4"],
-  faqContent: ["faqContent"],
-  faqContent2: ["faqContent2"],
-  faqContent3: ["faqContent3"],
-  faqContent4: ["faqContent4"],
+  faq: ["faq", "row3"],
+  row3: ["row3"],
   cta: ["cta", "row6"],
   row6: ["row6"],
   partner: ["partner", "row5"],
@@ -1516,10 +2264,6 @@ type NodeDefaultElementType = {
   row2: "div";
   faq: "section";
   row3: "div";
-  faqContent: "div";
-  faqContent2: "div";
-  faqContent3: "div";
-  faqContent4: "div";
   cta: "section";
   row6: "div";
   partner: "section";
@@ -1605,10 +2349,6 @@ export const PlasmicHomepage = Object.assign(
     row2: makeNodeComponent("row2"),
     faq: makeNodeComponent("faq"),
     row3: makeNodeComponent("row3"),
-    faqContent: makeNodeComponent("faqContent"),
-    faqContent2: makeNodeComponent("faqContent2"),
-    faqContent3: makeNodeComponent("faqContent3"),
-    faqContent4: makeNodeComponent("faqContent4"),
     cta: makeNodeComponent("cta"),
     row6: makeNodeComponent("row6"),
     partner: makeNodeComponent("partner"),
